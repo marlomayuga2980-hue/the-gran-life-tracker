@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Task {
+  id          String      @id @default(cuid())
+  title       String
+  description String
+  phase       String
+  tag         String
+  status      String      @default("Not Started")
+  steps       String      // JSON array of strings
+  notes       String?
+  updatedAt   DateTime    @updatedAt
+  createdAt   DateTime    @default(now())
+  timeEntries TimeEntry[]
+}
+
+model TimeEntry {
+  id        String   @id @default(cuid())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  hours     Float
+  date      DateTime @default(now())
+  weekStart DateTime
+  notes     String?
+  createdAt DateTime @default(now())
+}
