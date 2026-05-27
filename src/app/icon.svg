@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <!-- Gold gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#EDD99E"/>
+      <stop offset="50%"  stop-color="#D6BC8A"/>
+      <stop offset="100%" stop-color="#C4A870"/>
+    </linearGradient>
+    <!-- Subtle gloss highlight at top -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Gloss overlay (top half only) -->
+  <rect width="32" height="16" rx="7" fill="url(#shine)"/>
+
+  <!-- Navy "G" — serif, bold, centered -->
+  <text
+    x="16" y="24"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#2C3E6B"
+    letter-spacing="-0.5"
+  >G</text>
+</svg>

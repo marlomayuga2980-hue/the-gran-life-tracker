@@ -10,8 +10,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Gran Life — Launch Tracker",
-  description: "Project management dashboard for The Gran Life brand launch",
+  title: "The Gran Life — Task Tracker",
+  description: "Project management & time tracking dashboard for The Gran Life",
 };
 
 export default function RootLayout({
